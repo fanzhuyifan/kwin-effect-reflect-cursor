@@ -1,0 +1,11 @@
+*
+*/
+
+!**/.gitignore
+!**/CMakelists.txt
+!**/*.cpp
+!**/*.h
+!**/*.kcfg
+!**/*.kcfgc
+!**/*.md
+!**/*.json
