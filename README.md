@@ -2,14 +2,26 @@
 This plugin reflects the cursor near screen edges to make it more visible.
 
 ## Dependencies
-- kwin 6.2. In particular, the patch from https://invent.kde.org/plasma/kwin/-/commit/c6ac6d3caa0ee07256576b87dc9d1d4690620e25 is needed.
+- kconfig
+- kcoreaddons
+- kwin
+- qt6-base
 
-## Build
+and these are needed for building:
+- cmake
+- extra-cmake-modules
+
+## Packages
+### Arch Linux
+Available in the AUR as [kwin-effect-reflect-cursor-git](https://aur.archlinux.org/packages/kwin-effect-reflect-cursor-git/).
+
+## Build from source
+### Build
 ```
 cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
 cmake --build build
 ```
-## Install
+### Install
 ```
 cmake --install build
 ```
