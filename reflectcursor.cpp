@@ -48,12 +48,8 @@ bool ReflectCursorEffect::isActive() const
     return m_reflectX || m_reflectY;
 }
 
-void ReflectCursorEffect::pointerEvent(MouseEvent *event)
+void ReflectCursorEffect::pointerMotion(PointerMotionEvent *event)
 {
-    if (event->type() != QEvent::MouseMove) {
-        return;
-    }
-
     if (input()->pointer()->isConstrained()) {
         return;
     }

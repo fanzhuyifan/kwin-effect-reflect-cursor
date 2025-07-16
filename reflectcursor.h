@@ -27,7 +27,7 @@ public:
     static bool supported();
 
     void reconfigure(ReconfigureFlags flags) override;
-    void pointerEvent(MouseEvent *event) override;
+    void pointerMotion(PointerMotionEvent *event) override;
     bool isActive() const override;
 
 private:
