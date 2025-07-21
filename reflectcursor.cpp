@@ -75,11 +75,11 @@ void ReflectCursorEffect::showEffect()
     if (!m_cursorItem) {
         effects->hideCursor();
         m_cursorItem = std::make_unique<CursorItem>(effects->scene()->overlayItem());
-        m_cursorItem->setParentItem(effects->scene()->overlayItem());
         m_cursorItem->setPosition(m_cursor->pos());
         connect(m_cursor, &Cursor::posChanged, m_cursorItem.get(), [this]() {
             m_cursorItem->setPosition(m_cursor->pos());
         });
+        m_cursorItem->setVisible(true);
     }
     m_cursorItem->setTransform(QTransform::fromScale(m_reflectX ? -1 : 1, m_reflectY ? -1 : 1));
 }
